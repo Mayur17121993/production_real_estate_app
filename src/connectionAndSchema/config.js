@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
-let url = "mongodb://localhost:27017/RealEstateCatalog";
+let url =
+  "mongodb+srv://mayur:pass123@cluster0.sbmxaof.mongodb.net/realestateapp?retryWrites=true&w=majority";
 mongoose
-  .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
-    console.log("Connected to the database ");
+    console.log("Connected to the database");
   })
   .catch((err) => {
-    console.log(`Error connecting to the database. n${err}`);
+    console.log(`Error connecting to the database. \n${err}`);
   });
